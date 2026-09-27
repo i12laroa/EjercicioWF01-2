@@ -17,21 +17,6 @@ namespace EjercicioWF01_2
             InitializeComponent();
         }
 
-        private void MiniEncuesta_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void btnGenerar_Click(object sender, EventArgs e)
         {
             string mensaje = "Tu sistema operativo preferivo es ";
@@ -47,6 +32,8 @@ namespace EjercicioWF01_2
             mensaje += ComprobarCheck(chkbAdministracion);
             mensaje += ComprobarCheck(chkbGrafico);
             mensaje += ComprobarCheck(chkbProgramacion);
+
+            mensaje = mensaje.TrimEnd(new char[] { ' ', ',' });
 
             //Comprobamos el número de horas
             mensaje += " y el número de horas dedicadas al ordenador son: ";

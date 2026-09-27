@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MiniEncuesta));
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.rbWindows = new System.Windows.Forms.RadioButton();
             this.rbLinux = new System.Windows.Forms.RadioButton();
@@ -38,38 +35,25 @@
             this.chkbProgramacion = new System.Windows.Forms.CheckBox();
             this.chkbGrafico = new System.Windows.Forms.CheckBox();
             this.chkbAdministracion = new System.Windows.Forms.CheckBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.nudHoras = new System.Windows.Forms.NumericUpDown();
             this.btnGenerar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.GbSistema = new System.Windows.Forms.GroupBox();
+            this.GbEspecialidad = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudHoras)).BeginInit();
+            this.GbSistema.SuspendLayout();
+            this.GbEspecialidad.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(234, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Elige tu sistema operativo:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 184);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(190, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Elige tu especialidad:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 339);
+            this.label3.Location = new System.Drawing.Point(12, 12);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(284, 20);
             this.label3.TabIndex = 2;
@@ -78,7 +62,7 @@
             // rbWindows
             // 
             this.rbWindows.AutoSize = true;
-            this.rbWindows.Location = new System.Drawing.Point(34, 62);
+            this.rbWindows.Location = new System.Drawing.Point(6, 21);
             this.rbWindows.Name = "rbWindows";
             this.rbWindows.Size = new System.Drawing.Size(83, 20);
             this.rbWindows.TabIndex = 3;
@@ -89,7 +73,7 @@
             // rbLinux
             // 
             this.rbLinux.AutoSize = true;
-            this.rbLinux.Location = new System.Drawing.Point(34, 101);
+            this.rbLinux.Location = new System.Drawing.Point(6, 47);
             this.rbLinux.Name = "rbLinux";
             this.rbLinux.Size = new System.Drawing.Size(58, 20);
             this.rbLinux.TabIndex = 4;
@@ -100,7 +84,7 @@
             // rbMac
             // 
             this.rbMac.AutoSize = true;
-            this.rbMac.Location = new System.Drawing.Point(34, 136);
+            this.rbMac.Location = new System.Drawing.Point(6, 73);
             this.rbMac.Name = "rbMac";
             this.rbMac.Size = new System.Drawing.Size(54, 20);
             this.rbMac.TabIndex = 5;
@@ -111,18 +95,18 @@
             // chkbProgramacion
             // 
             this.chkbProgramacion.AutoSize = true;
-            this.chkbProgramacion.Location = new System.Drawing.Point(36, 222);
+            this.chkbProgramacion.Location = new System.Drawing.Point(6, 21);
             this.chkbProgramacion.Name = "chkbProgramacion";
             this.chkbProgramacion.Size = new System.Drawing.Size(114, 20);
             this.chkbProgramacion.TabIndex = 6;
             this.chkbProgramacion.Text = "Programación";
             this.chkbProgramacion.UseVisualStyleBackColor = true;
-            this.chkbProgramacion.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+           
             // 
             // chkbGrafico
             // 
             this.chkbGrafico.AutoSize = true;
-            this.chkbGrafico.Location = new System.Drawing.Point(36, 265);
+            this.chkbGrafico.Location = new System.Drawing.Point(6, 47);
             this.chkbGrafico.Name = "chkbGrafico";
             this.chkbGrafico.Size = new System.Drawing.Size(118, 20);
             this.chkbGrafico.TabIndex = 7;
@@ -132,27 +116,16 @@
             // chkbAdministracion
             // 
             this.chkbAdministracion.AutoSize = true;
-            this.chkbAdministracion.Location = new System.Drawing.Point(36, 307);
+            this.chkbAdministracion.Location = new System.Drawing.Point(6, 74);
             this.chkbAdministracion.Name = "chkbAdministracion";
             this.chkbAdministracion.Size = new System.Drawing.Size(117, 20);
             this.chkbAdministracion.TabIndex = 8;
             this.chkbAdministracion.Text = "Administración";
             this.chkbAdministracion.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(318, 495);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(52, 46);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // nudHoras
             // 
-            this.nudHoras.Location = new System.Drawing.Point(34, 374);
+            this.nudHoras.Location = new System.Drawing.Point(16, 35);
             this.nudHoras.Maximum = new decimal(new int[] {
             10,
             0,
@@ -164,32 +137,80 @@
             // 
             // btnGenerar
             // 
-            this.btnGenerar.Location = new System.Drawing.Point(20, 430);
+            this.btnGenerar.Location = new System.Drawing.Point(16, 63);
             this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(134, 29);
+            this.btnGenerar.Size = new System.Drawing.Size(156, 42);
             this.btnGenerar.TabIndex = 11;
             this.btnGenerar.Text = "Generar Informe";
             this.btnGenerar.UseVisualStyleBackColor = true;
             this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
+            // GbSistema
+            // 
+            this.GbSistema.Controls.Add(this.rbWindows);
+            this.GbSistema.Controls.Add(this.rbLinux);
+            this.GbSistema.Controls.Add(this.rbMac);
+            this.GbSistema.Location = new System.Drawing.Point(16, 115);
+            this.GbSistema.Name = "GbSistema";
+            this.GbSistema.Size = new System.Drawing.Size(297, 120);
+            this.GbSistema.TabIndex = 12;
+            this.GbSistema.TabStop = false;
+            this.GbSistema.Text = "Elige Sistema Operativo";
+            // 
+            // GbEspecialidad
+            // 
+            this.GbEspecialidad.Controls.Add(this.chkbProgramacion);
+            this.GbEspecialidad.Controls.Add(this.chkbGrafico);
+            this.GbEspecialidad.Controls.Add(this.chkbAdministracion);
+            this.GbEspecialidad.Location = new System.Drawing.Point(16, 261);
+            this.GbEspecialidad.Name = "GbEspecialidad";
+            this.GbEspecialidad.Size = new System.Drawing.Size(297, 99);
+            this.GbEspecialidad.TabIndex = 13;
+            this.GbEspecialidad.TabStop = false;
+            this.GbEspecialidad.Text = "Elige Especialidad";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Cornsilk;
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.nudHoras);
+            this.panel1.Controls.Add(this.btnGenerar);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 386);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(378, 163);
+            this.panel1.TabIndex = 14;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Cornsilk;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(378, 86);
+            this.panel2.TabIndex = 15;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(22, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(311, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "MINI ENCUESTA INFORMÁTICA";
+            // 
             // MiniEncuesta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(382, 553);
-            this.ControlBox = false;
-            this.Controls.Add(this.btnGenerar);
-            this.Controls.Add(this.nudHoras);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.chkbAdministracion);
-            this.Controls.Add(this.chkbGrafico);
-            this.Controls.Add(this.chkbProgramacion);
-            this.Controls.Add(this.rbMac);
-            this.Controls.Add(this.rbLinux);
-            this.Controls.Add(this.rbWindows);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(378, 549);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.GbEspecialidad);
+            this.Controls.Add(this.GbSistema);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(400, 600);
             this.MinimizeBox = false;
@@ -197,18 +218,21 @@
             this.Name = "MiniEncuesta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mini Encuesta";
-            this.Load += new System.EventHandler(this.MiniEncuesta_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+          
             ((System.ComponentModel.ISupportInitialize)(this.nudHoras)).EndInit();
+            this.GbSistema.ResumeLayout(false);
+            this.GbSistema.PerformLayout();
+            this.GbEspecialidad.ResumeLayout(false);
+            this.GbEspecialidad.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RadioButton rbWindows;
         private System.Windows.Forms.RadioButton rbLinux;
@@ -216,9 +240,13 @@
         private System.Windows.Forms.CheckBox chkbProgramacion;
         private System.Windows.Forms.CheckBox chkbGrafico;
         private System.Windows.Forms.CheckBox chkbAdministracion;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.NumericUpDown nudHoras;
         private System.Windows.Forms.Button btnGenerar;
+        private System.Windows.Forms.GroupBox GbSistema;
+        private System.Windows.Forms.GroupBox GbEspecialidad;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
     }
 }
 
